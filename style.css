@@ -10,7 +10,12 @@
 }
 
 /* COLOR */
-
+:root {
+  --caution: #E9D502;
+  --amber: #FFC600;
+  --warning: #FF9E0D;
+  --construction: #FE5000;
+}
 
 /* BASE */
 * {
@@ -20,8 +25,8 @@
 
 body {
   font-family: ShareTech, monospace;
-  border: 0.7em solid #E9D502;
-  background-color: #E9D502;
+  border: 0.7em solid var(--amber);
+  background-color: var(--amber);
   min-height: 100vh;
 }
 
@@ -34,10 +39,10 @@ main {
 /* COUNTER */
 .counter {
   width: 50%;
-  margin: 2em auto 1em auto;
-  padding: 0.5em;
+  margin: 1em auto;
+/*  padding: 0.5em;*/
   background-color: #fff;
-  border-radius: 1em;
+/*  border-radius: 1em;*/
   text-align: center;
   text-transform: uppercase;
   font-size: 3em;
@@ -45,8 +50,9 @@ main {
 
   .counter-inside {
     padding: 0.5em;
-    border-radius: 1em;
-    border: 0.25em solid #000;
+    box-shadow: 7px 7px #000;
+/*    border-radius: 1em;*/
+/*    border: 0.25em solid #000;*/
   }
 
   @property --num {
@@ -100,6 +106,7 @@ h3 {
     text-align: center;
     background-color: #000;
     color: #fff;
+    box-shadow: 7px 7px #fff;
   }
 
   .number {
@@ -121,6 +128,7 @@ h3 {
     margin: 0.5em auto;
     background-color: #fff;
     padding: 1.5em;
+    box-shadow: 7px 7px #000;
   }
 
   .date {
@@ -157,7 +165,7 @@ h3 {
 }
 
   table {
-    border: 0.2em solid #E9D502;
+    border: 0.2em solid var(--amber);
     border-collapse: collapse;
     padding: 5px;
     width: 100%;
@@ -166,14 +174,14 @@ h3 {
   }
 
   table th {
-    border: 0.2em solid #E9D502;
+    border: 0.2em solid var(--amber);
     padding: 5px;
     background-color: #000;
     color: #fff;
   }
 
   table td {
-    border: 0.2em solid #E9D502;
+    border: 0.2em solid var(--amber);
     padding: 5px;
     background-color: #fff;
     color: #000;
