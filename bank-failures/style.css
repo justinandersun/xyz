@@ -1,0 +1,193 @@
+/* TYPEFACES */
+@font-face {
+    font-family: ShareTech;
+    src: url(ShareTechMono-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: ZillaSlab;
+    src: url(ZillaSlab-Regular.ttf) format("truetype");
+}
+
+/* COLOR */
+
+
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: ShareTech, monospace;
+  border: 0.7em solid #E9D502;
+  background-color: #E9D502;
+  min-height: 100vh;
+}
+
+main {
+  border: 0.7em solid #000;
+  border-radius: 1em;
+  min-height: 100vh;
+}
+
+/* COUNTER */
+.counter {
+  width: 50%;
+  margin: 2em auto 1em auto;
+  padding: 0.5em;
+  background-color: #fff;
+  border-radius: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+  .counter-inside {
+    padding: 0.5em;
+    border-radius: 1em;
+    border: 0.25em solid #000;
+  }
+
+  @property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+
+  .flipper {
+    animation: counter 4s ease-in-out;
+    animation-iteration-count: 1;
+    counter-reset: num var(--num);
+    display: inline;
+  }
+
+  .flipper::after {
+    content: counter(num);
+  }
+
+  @keyframes counter {
+    from {
+      --num: 10;
+    }
+    to {
+      --num: 45;
+    }
+  }
+
+
+h3 {
+  font-family: ShareTech, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5em;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* THIS YEAR */
+.stats {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  width: 50%;
+  margin: 0 auto 1em auto;
+}
+
+  .statbox {
+    padding: 0.5em;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .number {
+    font-size: 3em;
+  }
+
+  .metric {
+    text-transform: uppercase;
+  }
+
+/* LATEST */
+.latest {
+  font-family: ZillaSlab, serif;
+  max-width: 50%;
+  margin: 0 auto 1em auto;
+}
+
+  .highlight {
+    margin: 0.5em auto;
+    background-color: #fff;
+    padding: 1.5em;
+  }
+
+  .date {
+    font-family: ShareTech, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(0,0,0,0.7);
+  }
+
+  h2 {
+    font-size: 2em;
+    padding: 0.2em 0;
+  }
+
+  .summary {
+    font-size: 1.1em;
+    line-height: 1.2em;
+    padding: 0.5em 0;
+  }
+
+  .latest-links a {
+    text-decoration: none;
+    border-bottom: 1px dotted #000;
+    font-size: 1.1em;
+    margin: 0.5em 0;
+    color: rgba(0,0,0,0.7);
+  }
+
+/* RECENT */
+.recent {
+  max-width: 50%;
+  margin: 0 auto 2em auto;
+  padding: 0 1em;
+}
+
+  table {
+    border: 0.2em solid #E9D502;
+    border-collapse: collapse;
+    padding: 5px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  table th {
+    border: 0.2em solid #E9D502;
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+  }
+
+  table td {
+    border: 0.2em solid #E9D502;
+    padding: 5px;
+    background-color: #fff;
+    color: #000;
+  }
+
+footer {
+  text-align: center;
+  padding: 0.5em;
+  margin: 1em auto;
+  font-size: 1.1em;
+}
+  
+  footer a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px dotted #000;
+  }
