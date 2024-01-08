@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Texturina";
+  src: url("Texturina.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("Unbounded.ttf");
+  font-display: swap;
+}
